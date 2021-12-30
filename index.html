@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <main class="ip-tracker">
+      <header class="ip-tracker__header">
+        <label for="ip-tracker-search" class="ip-tracker__label"
+          >IP Address Tracker</label
+        >
+        <div class="ip-tracker__search">
+          <input
+            id="ip-tracker-search"
+            type="text"
+            class="ip-tracker__input"
+            placeholder="Search for any IP address or domain"
+          />
+          <button type="submit" class="ip-tracker__btn">
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Arrow icon"
+              class="ip-tracker__arrow-icon"
+            />
+          </button>
+        </div>
+        <ul class="ip-tracker__data">
+          <li class="ip-tracker__data-item">
+            IP
+            <span class="ip-tracker__ip"></span>
+          </li>
+          <li class="ip-tracker__data-item">
+            Name
+            <span class="ip-tracker__name"></span>
+          </li>
+          <li class="ip-tracker__data-item">
+            Location
+            <span class="ip-tracker__location"></span>
+          </li>
+          <li class="ip-tracker__data-item">
+            Timezone
+            <span class="ip-tracker__timezone"></span>
+          </li>
+          <li class="ip-tracker__data-item">
+            ISP
+            <span class="ip-tracker__isp"></span>
+          </li>
+        </ul>
+      </header>
+
+      <div class="ip-tracker__map" id="map">
+        <span class="ip-tracker__error-message"></span>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

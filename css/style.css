@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-grey: hsl(0, 0%, 59%);
+  --color-dark-grey: hsl(0, 0%, 17%);
+  --ff-main: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: var(--color-grey);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ip-tracker {
+  max-width: 90%;
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ip-tracker__header {
+  width: 100%;
+  background-image: url(../images/pattern-bg.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ip-tracker__label {
+  color: #fff;
+  font-size: 2em;
+}
+
+.ip-tracker__search {
+  display: flex;
+  align-items: center;
+}
+
+.ip-tracker__input {
+  border: 0;
+  padding: 1rem 2rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 18rem;
+}
+
+.ip-tracker__btn {
+  cursor: pointer;
+  background-color: #000;
+  border: 0;
+  padding: 1rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ip-tracker__data {
+  max-width: 90%;
+  width: 90%;
+  height: 10rem;
+  z-index: 10;
+  position: relative;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  list-style: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: var(--color-grey);
+  transform: translateY(70%);
+  text-align: center;
+}
+
+.ip-tracker__data-item:not(:last-child) {
+  border-right: 1px solid var(--color-grey);
+  padding-right: 2rem;
+}
+
+.ip-tracker__data-item span {
+  display: block;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ip-tracker__map {
+  height: 50vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.popup {
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media screen and (max-width: 60em) {
+  .ip-tracker__data {
+    width: 90%;
+    padding: 3rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 46.9em) {
+  .ip-tracker__data {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .ip-tracker__data-item:not(:last-child) {
+    border-right: none;
+    padding: 0;
+  }
+}
